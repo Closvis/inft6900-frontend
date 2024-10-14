@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--https://ionic.io/ionicons-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <!--  确保在 Internet Explorer 中使用最新的渲染模式 -->
+    <meta name = "viewport" content="width = device-width,
+    initial-scale=1.0">
+    <!--  设置视口属性，确保页面在移动设备上以合适的宽度显示，
+    "device-width" 指设备宽度，"initial-scale=1.0" 指初始缩放比例 -->
+    <title>Website with Login & Registration | Clovis</title>
+    <!--  定义网页的标题，显示在浏览器标签中 -->
+    <link rel="stylesheet" href="style.css">
+    <!--  引入外部 CSS 文件，用于定义页面的样式 -->
+</head>
+
+<body>
+    <header>
+        <!-- 定义网站的头部内容，通常包含网站标识和导航菜单 -->
+        <h2 class="logo">Logo</h2>
+        <!--  网站 Logo（文字或图片），类名为 "log" -->
+        <nav class="navigation">
+            <!--  定义导航菜单 -->
+            <a href="#">Home</a>
+            <!--  链接到主页 -->
+            <a href="#">About</a>
+            <!--  链接到“关于我们”页面 -->
+            <a href="#">Services</a>
+            <!--  链接到服务页面 -->
+            <a href="#">Contact</a>
+            <!--  链接到联系页面 -->
+            <button class = "btnLogin-popup">Login</button>
+            <!--按钮-->
+        </nav>
+    </header>
+
+    <div class = "wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login" >
+            <h1>Login</h1>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a
+                    href="#"
+                    class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                        I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--  引入外部 JavaScript 文件，用于定义页面的交互逻辑 -->
+</body>
+
+</html>
