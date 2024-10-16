@@ -255,3 +255,219 @@ header {
 .login-register p a:hover {
     text-decoration: underline;
 }
+
+
+
+/* 忘记密码弹窗样式 */
+.wrapper.active-forgot {
+    height: 400px;  /* 调整忘记密码弹窗的高度 */
+}
+
+.wrapper .form-box.forgot-password {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active-forgot .form-box.forgot-password {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active-forgot .form-box.login,
+.wrapper.active-forgot .form-box.register {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.forgot-password h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.wrapper .form-box.forgot-password .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.wrapper .form-box.forgot-password .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.wrapper .form-box.forgot-password .input-box input:focus~label,
+.wrapper .form-box.forgot-password .input-box input:valid~label {
+    top: -5px;
+}
+
+.wrapper .form-box.forgot-password .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.wrapper .form-box.forgot-password .input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.wrapper .form-box.forgot-password .btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.wrapper .form-box.forgot-password .login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.wrapper .form-box.forgot-password .login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper .form-box.forgot-password .login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* 重置密码弹窗样式 */
+.wrapper.active-reset {
+    height: 400px;  /* 根据重置密码表单的需要调整高度 */
+}
+
+.wrapper .form-box.reset-password {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active-reset .form-box.reset-password {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active-reset .form-box.login,
+.wrapper.active-reset .form-box.register,
+.wrapper.active-reset .form-box.forgot-password {
+    transition: none;
+    transform: translateX(-400px); /* 隐藏其他表单 */
+}
+
+/* 重置密码表单样式 */
+.wrapper .form-box.reset-password h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.wrapper .form-box.reset-password .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.wrapper .form-box.reset-password .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.wrapper .form-box.reset-password .input-box input:focus~label,
+.wrapper .form-box.reset-password .input-box input:valid~label {
+    top: -5px;
+}
+
+.wrapper .form-box.reset-password .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.wrapper .form-box.reset-password .input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+/* 重置密码按钮 */
+.wrapper .form-box.reset-password .btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* 重置密码表单底部的返回登录链接 */
+.wrapper .form-box.reset-password .login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.wrapper .form-box.reset-password .login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper .form-box.reset-password .login-register p a:hover {
+    text-decoration: underline;
+}
