@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3385dc1-89cb-4c89-95f5-249ad5810852" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style3.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script3.js" beforeDir="false" afterPath="$PROJECT_DIR$/script3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -104,7 +100,7 @@
       <workItem from="1728893791594" duration="246000" />
       <workItem from="1728894040373" duration="59000" />
       <workItem from="1728894123541" duration="271000" />
-      <workItem from="1728900015828" duration="46092000" />
+      <workItem from="1728900015828" duration="50019000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
