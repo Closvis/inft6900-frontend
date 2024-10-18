@@ -4,34 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content = "IE=edge">
-    <!--  确保在 Internet Explorer 中使用最新的渲染模式 -->
     <meta name = "viewport" content="width = device-width,
     initial-scale=1.0">
-    <!--  设置视口属性，确保页面在移动设备上以合适的宽度显示，
-    "device-width" 指设备宽度，"initial-scale=1.0" 指初始缩放比例 -->
     <title>Home | Clovis</title>
-    <!--  定义网页的标题，显示在浏览器标签中 -->
     <link rel="stylesheet" href="style.css">
-    <!--  引入外部 CSS 文件，用于定义页面的样式 -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 <header>
-    <!-- 定义网站的头部内容，通常包含网站标识和导航菜单 -->
     <h2 class="logo">Comma</h2>
-    <!--  网站 Logo（文字或图片），类名为 "log" -->
+
+    <div class="social-media">
+        <a href="https://x.com/comma_info6900"><i class='bx bxl-twitter'></i></a>
+        <a href="https://www.facebook.com/share/p/CQretcHAK3pp8jd1/"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.tiktok.com/@comma_info6900"><i class='bx bxl-tiktok'></i></a>
+        <a href="https://www.instagram.com/comma_inft6900/"><i class='bx bxl-instagram-alt'></i></a>
+    </div>
+
     <nav class="navigation">
-        <!--  定义导航菜单 -->
-        <a href="index.html">Home</a>
-        <!--  链接到主页 -->
-        <a href="#">About</a>
-        <!--  链接到“关于我们”页面 -->
-        <a href="#">Services</a>
-        <!--  链接到服务页面 -->
+        <a href="#" class="home-button">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-        <!--  链接到联系页面 -->
         <button class = "btnLogin-popup">Login</button>
-        <!--按钮-->
     </nav>
 </header>
 
@@ -151,7 +147,7 @@
         </form>
     </div>
 </div>
-
+<script src="auth.js"></script>
 <script src="script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

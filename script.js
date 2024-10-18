@@ -39,47 +39,57 @@ iconClose.addEventListener('click', () => {
     wrapper.classList.add('active-login');
 });
 
-
 const loginForm = document.querySelector('.form-box.login form');
 loginForm.addEventListener('submit', function(event) {
     event.preventDefault();  // 阻止默认表单提交行为
 
-    const formData = new FormData(this);  // 获取表单数据
-    const jsonData = {};  // 用于存储 JSON 数据
-    formData.forEach((value, key) => {
-        jsonData[key] = value;
-    });
+        const formData = new FormData(this);  // 获取表单数据
 
-    // 手动获取复选框的值（因为复选框如果未勾选，FormData中不会包含该值）
-    const rememberMeCheckbox = document.querySelector('input[name="remember_me"]');
-    jsonData['remember_me'] = rememberMeCheckbox.checked;
+        // const rememberMe = document.querySelector('input[name="remember_me"]').checked;
+        // const username = formData.get('username');
+        // if (rememberMe) {
+        //     localStorage.setItem('remembered_username', username);
+        // } else {
+        //     localStorage.removeItem('remembered_username');
+        // }
 
-    console.log('Sending login data:', jsonData);  // 输出登录数据
-
-    // 发送 fetch 请求到后端
-    fetch('http://127.0.0.1:8000/accounts/api/login/', {  // 确保 URL 和后端匹配
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        //     'X-CSRFToken': getCookie('csrftoken')  // 获取 CSRF token
-        },
-        body: JSON.stringify(jsonData)  // 将表单数据转换为 JSON 格式发送
-    })
-        .then(response => response.json())  // 解析响应为 JSON
-        .then(data => {
-            if (data.status === 'success') {
-                // 登录成功，重定向到主页或其他页面
-                window.location.href = data.redirect_url || '/';
-            } else {
-                // 显示错误消息
-                document.querySelector('#errorMessage').innerText = data.error_msg;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.querySelector('#errorMessage').innerText = error.message;  // Display error
+        const jsonData = {};  // 用于存储 JSON 数据
+        formData.forEach((value, key) => {
+            jsonData[key] = value;
         });
-});
+
+        // 手动获取复选框的值（因为复选框如果未勾选，FormData中不会包含该值）
+        const rememberMeCheckbox = document.querySelector('input[name="remember_me"]');
+        jsonData['remember_me'] = rememberMeCheckbox.checked;
+
+        console.log('Sending login data:', jsonData);  // 输出登录数据
+
+        // 发送 fetch 请求到后端
+        fetch('http://127.0.0.1:8000/accounts/api/login/', {  // 确保 URL 和后端匹配
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            //     'X-CSRFToken': getCookie('csrftoken')  // 获取 CSRF token
+            },
+            body: JSON.stringify(jsonData)  // 将表单数据转换为 JSON 格式发送
+        })
+            .then(response => response.json())  // 解析响应为 JSON
+            .then(data => {
+                console.log(data);
+                if (data.status === 'success') {
+                    // 登录成功，重定向到主页或其他页面
+                    localStorage.setItem('access_token', data.tokens.access); // 保存token到localStorage
+                    window.location.href = data.redirect_url || '/';
+                } else {
+                    // 显示错误消息
+                    document.querySelector('#errorMessage').innerText = data.error_msg;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.querySelector('#errorMessage').innerText = error.message;  // Display error
+            });
+    });
 
 const registerForm = document.querySelector('.form-box.register form');
 registerForm.addEventListener('submit', function(event) {
@@ -219,4 +229,11 @@ function getCookie(name) {
     return cookieValue;
 }
 
-
+// document.addEventListener('DOMContentLoaded', function () {
+//     const usernameInput = document.querySelector('input[name="username"]');
+//     const rememberedUsername = localStorage.getItem('remembered_username');
+//
+//     if (rememberedUsername) {
+//         usernameInput.value = rememberedUsername;
+//     }
+// });

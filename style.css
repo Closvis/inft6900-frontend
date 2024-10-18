@@ -78,6 +78,39 @@ header {
     transition: .5s;
 }
 
+.social-media {
+    margin: 0 auto 0 50px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.social-media a:hover {
+    background: #fff;
+}
+
+.social-media a i {
+    font-size: 20px;
+    color: #fff;
+    transition: .5s;
+}
+
+.social-media a:hover i {
+    color: #444;
+}
+
+
 .navigation .btnLogin-popup:hover{
     background: #fff;
     color: #162938;
