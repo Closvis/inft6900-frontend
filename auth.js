@@ -68,5 +68,3 @@ logoutBtn.addEventListener('click', () => {
         .catch(error => console.error('Error:', error));
 });
 
-// localStorage.removeItem('access_token');
-//
